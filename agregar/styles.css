@@ -1,0 +1,92 @@
+/* Agregar gasto — styles.css */
+body { display: block; padding: 0; }
+
+.campo { margin-bottom: 1.2em; }
+
+.campo label {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-campo {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 0.8em;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding: 0.8em 1em;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+.input-campo:focus { outline: none; border-color: #ffd200; }
+.input-campo::placeholder { color: rgba(255,255,255,0.3); }
+
+/* Quién gasta */
+.quien-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+}
+
+.quien-btn {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 0.8em;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0.7em;
+    transition: all 0.2s;
+}
+#quien-esposo.activo {
+    background: rgba(74,144,217,0.2);
+    border-color: #4A90D9;
+    color: white;
+}
+#quien-esposa.activo {
+    background: rgba(231,76,60,0.2);
+    border-color: #E74C3C;
+    color: white;
+}
+
+/* Categorías */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6em;
+}
+
+.cat-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.8em;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 0.6em 0.5em;
+    text-align: left;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+.cat-btn:hover {
+    background: rgba(255,210,0,0.1);
+    border-color: rgba(255,210,0,0.3);
+    color: white;
+}
+.cat-btn.activo {
+    background: rgba(255,210,0,0.15);
+    border-color: #ffd200;
+    color: #ffd200;
+    font-weight: 600;
+}
