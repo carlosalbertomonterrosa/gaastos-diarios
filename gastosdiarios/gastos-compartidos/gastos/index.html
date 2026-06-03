@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/gastos-compartidos/styles.css">
+    <link rel="stylesheet" href="/gastos-compartidos/gastos/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Gastos — Gastos Compartidos</title>
+</head>
+<body>
+    <div class="pagina">
+        <div class="pagina-header">
+            <span class="pagina-titulo">📋 Gastos</span>
+            <span class="pagina-usuario" id="txt-usuario">...</span>
+        </div>
+        <div class="mes-selector tarjeta">
+            <button onclick="cambiarMes(-1)">◀</button>
+            <span id="txt-mes">Cargando...</span>
+            <button onclick="cambiarMes(1)">▶</button>
+        </div>
+        <div id="acordeon-contenedor"><div class="spinner"></div></div>
+    </div>
+    <nav class="navbar">
+        <a href="/gastos-compartidos/dashboard/"><span class="nav-icono">📊</span>Dashboard</a>
+        <a href="/gastos-compartidos/gastos/" class="activo"><span class="nav-icono">📋</span>Gastos</a>
+        <a href="/gastos-compartidos/agregar/"><span class="nav-icono">➕</span>Agregar</a>
+        <a href="/gastos-compartidos/historial/"><span class="nav-icono">🗓</span>Historial</a>
+        <a href="/gastos-compartidos/" onclick="sessionStorage.clear()"><span class="nav-icono">🚪</span>Salir</a>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/gastos-compartidos/supabase.js"></script>
+    <script src="/gastos-compartidos/gastos/script.js"></script>
+</body>
+</html>

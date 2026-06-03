@@ -1,0 +1,35 @@
+/* Historial styles.css */
+body { display: block; padding: 0; }
+
+.mes-card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1.2em;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+.mes-card-header { padding: 1em 1.2em; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mes-card-titulo { color: #ffd200; font-size: 16px; font-weight: 700; margin-bottom: 0.8em; }
+
+.mes-totales { display: flex; gap: 0.6em; }
+.mes-total-item {
+    flex: 1; background: rgba(255,255,255,0.05);
+    border-radius: 0.8em; padding: 0.6em 0.5em; text-align: center;
+}
+.mes-total-quien { font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 0.2em; }
+.mes-total-monto { font-size: 14px; font-weight: 700; }
+.mes-total-monto.esposo { color: #4A90D9; }
+.mes-total-monto.esposa { color: #E74C3C; }
+.mes-total-monto.total  { color: #ffd200; }
+
+.mes-deuda {
+    color: rgba(255,255,255,0.6); font-size: 12px;
+    padding: 0.6em 1.2em; text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+.btn-ver-mes {
+    background: transparent; border: none; color: rgba(255,210,0,0.7);
+    cursor: pointer; font-size: 12px; padding: 0.5em 1.2em;
+    width: 100%; transition: color 0.2s;
+}
+.btn-ver-mes:hover { color: #ffd200; }

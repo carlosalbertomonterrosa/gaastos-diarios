@@ -1,0 +1,159 @@
+/* ============================================
+   GASTOS COMPARTIDOS — Carlos Monettrosa
+   Gastos — Acordeón styles.css
+   ============================================ */
+
+body { display: block; padding: 0; }
+
+/* Selector de mes */
+.mes-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mes-selector button {
+    background: rgba(255,255,255,0.08);
+    border: none;
+    border-radius: 0.5em;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.3em 0.8em;
+    transition: background 0.2s;
+}
+.mes-selector button:hover { background: rgba(255,255,255,0.15); }
+
+/* Acordeón */
+.acord-item {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1.2em;
+    margin-bottom: 0.8em;
+    overflow: hidden;
+}
+
+.acord-header {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.2em;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.acord-header:hover { background: rgba(255,255,255,0.04); }
+
+.acord-izq {
+    align-items: center;
+    display: flex;
+    gap: 0.8em;
+}
+
+.acord-icono { font-size: 24px; }
+
+.acord-nombre {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.acord-der {
+    align-items: center;
+    display: flex;
+    gap: 0.8em;
+}
+
+.acord-total {
+    color: #ffd200;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.acord-flecha {
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.acord-item.abierto .acord-flecha { transform: rotate(180deg); }
+
+/* Lista de gastos dentro del acordeón */
+.acord-body {
+    display: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.acord-item.abierto .acord-body { display: block; }
+
+.gasto-fila {
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em 1.2em;
+}
+
+.gasto-fila:last-child { border-bottom: none; }
+
+.gasto-izq { flex: 1; }
+
+.gasto-quien {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gasto-quien.esposo { color: #4A90D9; }
+.gasto-quien.esposa { color: #E74C3C; }
+
+.gasto-desc {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+.gasto-fecha {
+    color: rgba(255,255,255,0.35);
+    font-size: 11px;
+    margin-top: 0.2em;
+}
+
+.gasto-der {
+    align-items: center;
+    display: flex;
+    gap: 0.8em;
+}
+
+.gasto-monto {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.btn-eliminar {
+    background: rgba(231,76,60,0.15);
+    border: 1px solid rgba(231,76,60,0.3);
+    border-radius: 0.5em;
+    color: #E74C3C;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0.3em 0.5em;
+    transition: all 0.2s;
+}
+.btn-eliminar:hover {
+    background: rgba(231,76,60,0.3);
+}
+
+/* Vacío */
+.sin-gastos {
+    color: rgba(255,255,255,0.3);
+    font-size: 13px;
+    padding: 1em 1.2em;
+    text-align: center;
+}
