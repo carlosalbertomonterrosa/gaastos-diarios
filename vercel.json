@@ -1,6 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/gastos-compartidos/(.*)", "destination": "/gastos-compartidos/$1/index.html" },
-    { "source": "/gastos-compartidos", "destination": "/gastos-compartidos/index.html" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": true
 }
